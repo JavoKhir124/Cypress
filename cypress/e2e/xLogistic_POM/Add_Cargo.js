@@ -239,6 +239,167 @@ class Add_Cargo {
           .click()
           .should('exist');
     }
+    // Click add car list button
+    click_Add_Car_List_Btn() {
+      cy.get('.css-1kmgt9b > .styles_dropdown__0B9o7 > .styles_controlWrap__KbfRu > .styles_control__HmD3c')
+        .click()
+        .should('be.visible')
+        .wait(1000);
+    }
+    // Select Car for cargo
+    select_Car_For_Cargo() {
+      cy.get('.styles_options__uIM1g > :nth-child(3)')
+        .click();
+    }
+    // Enter the number number of car
+    enter_Number_Of_Cars() {
+      cy.get('.styles_inputWrapper__iW8LS')
+        .type('12ja');
+    }
+    // Select type loading 
+    select_Loading_Type() {
+      cy.get(':nth-child(2) > .styles_checkboxText__j3uZz')
+        .click({ multiple: true })
+        .wait(500);
+    }
+    // Add parameters to the car
+    click_Add_Parameters_To_TheCar_1() {
+      cy.get(':nth-child(3) > .css-1rsmmrh > :nth-child(1)')
+        .click();
+    }
+    click_Add_Parameters_To_TheCar_2() {
+      cy.get(':nth-child(3) > .css-1rsmmrh > :nth-child(2)')
+        .click();
+    }
+    // Check added car is parameters
+    check_Add_Parameters_Of_Cars() {
+      cy.get('.css-186mqrt > :nth-child(1)').click()
+      cy.get('.css-186mqrt > :nth-child(2)').click()
+      cy.get('.css-186mqrt > :nth-child(3)').click()
+    }
+    // Enter the number of belts 
+    enter_Number_Belts() {
+      cy.get('#remains')
+        .type('dakj12');
+    }
+    // Click no haggling button
+    click_No_Haggling_Btn() {
+      cy.get(':nth-child(2) > .styles_radioLabel__9zylw')
+        .click()
+        .wait(1500);
+    }
+    // Click request button
+    click_Request_Btn() {
+      cy.get(':nth-child(3) > .styles_radioLabel__9zylw')
+        .click()
+        .wait(1500);
+    }
+    // Click negotiable button
+    click_Negotiable_Btn() {
+      cy.get(':nth-child(1) > .styles_radioLabel__9zylw')
+        .click()
+        .wait(1500);
+    }
+    // Enter Suggested amount 
+    enter_Suggested_Amount () {
+      cy.get('.css-180ytxh > :nth-child(2) > .styles_field__sHsQk > .styles_contentWrapper__aMUwP > .styles_inputWrapper__EC_7t > .styles_fieldInput__ngeii')
+        .type('ahdjd1000020');
+    }
+    // Enter Prepayment amount
+    enter_Prepayment_Amount() {
+      cy.get('.css-180ytxh > :nth-child(3) > .styles_field__sHsQk > .styles_contentWrapper__aMUwP > .styles_inputWrapper__EC_7t > .styles_fieldInput__ngeii')
+        .type('ahdjd10000');
+    }
+    // Click the money type button 
+    click_Money_Type_Btn() {
+      cy.get('.css-180ytxh > :nth-child(2) > .styles_field__sHsQk > .styles_contentWrapper__aMUwP > .styles_additionalItem__KHoZU >.styles_additionalItemContent__KWDkp > .styles_additionalItemLabelWrapper__jmEqJ > :nth-child(1)')
+        .click()
+        .wait(500);
+    }
+    // Click the type money button dollar
+    click_Money_Type_Rubl() {
+      cy.get(':nth-child(2) > .styles_additionalItemOptionLabel__CerVF > span')
+        .click();
+    }
+     // Click the type money button dollar
+     click_Money_Type_Dollar() {
+      cy.get(':nth-child(3) > .styles_additionalItemOptionLabel__CerVF > span')
+        .click();
+    }
+     // Click the type money button Sum
+     click_Money_Type_Sum() {
+      cy.get(':nth-child(4) > .styles_additionalItemOptionLabel__CerVF > span')
+        .click();
+    }
+    // Click Payment type dropdown button
+    click_Payment_Type_Dropdown_Btn() {
+      cy.get(':nth-child(5) > .styles_dropdown__0B9o7 > .styles_controlWrap__KbfRu > .styles_control__HmD3c')
+        .click()
+        .wait(1000);
+    }
+    // Select Payment type 
+    select_Payment_Type_Transfer() {
+      cy.get('.styles_options__uIM1g > :nth-child(1)')
+        .click()
+        .wait(1000);
+    }
+    // Payment in number of days
+    enter_Payment_In_Number_Of_Days() {
+      cy.get('.css-1phy807 > .css-1pkc2h9 > .styles_field__sHsQk > .styles_contentWrapper__aMUwP > .styles_inputWrapper__EC_7t > .styles_fieldInput__ngeii')
+        .type('ajksda10')
+        .wait(1000);
+    }
+    // Click the Prepayment of fuel button
+    click_Payment_Of_Fuel_Btn() {
+      cy.get('.css-lvc35n > .css-1rsmmrh > :nth-child(1)')
+        .click()
+        .wait(1000);
+    }
+    // Click the Payment upon unloading (hides payment via) button
+    click_Payment_Upon_Unloading_Hides_Payment_Via_Btn() {
+      cy.get('.css-lvc35n > .css-1rsmmrh > .chakra-button')
+      .click()
+      .wait(1000);
+    }
+    // Enter the payment of fuel procent
+    enter_Payment_Of_Fuel_Procent() {
+      cy.get('.css-idy3la > .styles_field__sHsQk > .styles_contentWrapper__aMUwP > .styles_inputWrapper__EC_7t > .styles_fieldInput__ngeii')
+        .type('30');
+    }
+    // Click the Prepayment of fuel checkbox button
+    click_Payment_Of_Fuel_Checkbox_btn() {
+      cy.get('.css-idy3la > :nth-child(2) > .styles_checkboxText__j3uZz')
+        .click();
+    }
+    // Click the Payment upon unloading (hides payment via) chekbox button
+    click_Payment_Upon_Unloading_Hides_Payment_Via_Checkbox_Btn() {
+      cy.get(':nth-child(3) > .styles_checkboxText__j3uZz')
+        .click({ multiple: true });
+    }
+    // Click the I enter into an agreement with a carrier from my company button
+    click_Direct_Contract_checkbox_Btn() {
+      cy.get(':nth-child(4) > .css-idy3la > .styles_checkboxLabel__CWrzt > .styles_checkboxText__j3uZz')
+        .click({ multiple: true });
+    }
+    // Add customer is phone number 
+    add_Customer_Is_Number() {
+      cy.get('.css-1h5qa64 > .css-1pkc2h9 >.styles_field__sHsQk > .styles_contentWrapper__aMUwP > .styles_inputWrapper__EC_7t > .styles_fieldInput__ngeii')
+        .type('+998931431817')
+        .wait(1000);
+    }
+    // Add comment for driver
+    add_Comment_For_Driver() {
+      cy.get('.chakra-textarea').type('This comment for driver')
+        .wait(2000);
+    }
+    // Click publish button
+    click_Publish_Btn() {
+      cy.get('.css-ke6f4z > .chakra-button')
+        .click();
+    }
+
+
+
 
 }
 
