@@ -233,6 +233,7 @@ describe('xLogistics', () => {
 
     // Click Publish button
     addCargoBtn.click_Publish_Btn();
+    
 
     });
 
